@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Simple Leaflet example</title>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .leaflet-container {
+        background-color: #d3fc65;
+      }
+
+      #map {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+  	</header>
+    <div id="map"></div>
+    <script>
+      var tileUrl = 'https://a.tiles.mapbox.com/v4/bertspaan.ccb08263/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYmVydHNwYWFuIiwiYSI6ImR3dERiQk0ifQ.DLbScmbRohc3Sqv7prfhqw';
+      var map = L.map('map');
+
+      L.tileLayer(tileUrl).addTo(map);
+      map.setView([52.3728, 4.9002], 16);
+    </script>
+  </body>
+</html>
